@@ -4,12 +4,12 @@ BOOLEEN FONCTION  trace (ENTIER x,ENTIER y)
 CONST blanc=0,
       croix=1;
  
-      SI x<>y ALORS SI y=25-x ALORS ECRIRE(blanc)
-                    SINON ECRIRE(croix)
-                    FSI
-      SINON ECRIRE(blanc)
+      SI x<>y ALORS SI y=25-x ALORS ECRIRE(blanc);
+                    SINON ECRIRE(croix);
+                    FSI;
+      SINON ECRIRE(blanc);
       FSI;
-      SI x=24 ALORS  ALALIGNE FSI;
+      SI x=24 ALORS ALALIGNE FSI;
  RETOURNE VRAI
  FFONCTION
 
@@ -21,12 +21,11 @@ VAR BOOLEEN b;
       ECRIRE("                            ");
       TANTQUE i+1<>25 FAIRE
         b = trace(i+1,j+1);
-         i=i+1
+        i=i+1;
       FAIT;
       j=j+1;
-      i=0
-      
-   FAIT  
+      i=0;
+   FAIT;
 FPRINCIPAL
 FPROGRAMME
 (*

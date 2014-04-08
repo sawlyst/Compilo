@@ -210,8 +210,8 @@ public class YVM implements Constantes {
 		
 	public void fait() {
 		Ecriture.ecrireStringln(o, "goto "+iterations.getEtiquetteDebut());
-		Ecriture.ecrireStringln(o,"");
-		Ecriture.ecrireStringln(o, iterations.getEtiquetteFinAndFinish()+ ":");
+		Ecriture.ecrireString(o,"");
+		//Ecriture.ecrireStringln(o, iterations.getEtiquetteFinAndFinish()+ ":");
 	}
 	
 	public void si()

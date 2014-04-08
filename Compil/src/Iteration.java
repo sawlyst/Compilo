@@ -13,7 +13,6 @@ public class Iteration implements Etiquette {
 		stack.push(nbBoucles);
 	}
 	
-	
 	public String getEtiquetteFin()
 	{
 		return labelEtiquetteFin+stack.peek();

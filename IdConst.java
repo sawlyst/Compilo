@@ -1,5 +1,3 @@
-package compilateur;
-
 public class IdConst extends Ident {
 	private int valeur;
 
@@ -25,8 +23,7 @@ public class IdConst extends Ident {
 
 	@Override
 	public void calculerOffset(int taille) {
-		// TODO Auto-generated method stub
-		
+		// TODO Auto-generated method stub	
 	}
 
 }

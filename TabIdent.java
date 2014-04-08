@@ -1,5 +1,3 @@
-package compilateur;
-
 import java.util.HashMap;
 import java.util.Iterator;
 
@@ -26,8 +24,7 @@ public class TabIdent {
 	}
 	
 	public int nombreParametresFonction(String nom) {
-		return chercheFonction(nom).getListeParams().size(); 
-		
+		return chercheFonction(nom).getListeParams().size();
 	}
 
 	public boolean existeIdent(String clef) {
@@ -74,7 +71,7 @@ public class TabIdent {
 		}
 		catch (Exception e)
 		{
-			System.out.println("Erreur (l."+tok.beginLine+"): l'identifiant "+nomIdent+" n'est pas déclaré.");
+			System.out.println("ERREUR (l. "+tok.beginLine+"): L'identifiant "+nomIdent+" n'est pas declare");
 		}
 		
 		return val;
@@ -103,6 +100,5 @@ public class TabIdent {
 	{
 		System.out.println(global + " \n"+local);
 	}
-	
 	
 }

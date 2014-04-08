@@ -1,4 +1,3 @@
-package compilateur;
 public class YVMasm extends YVM {
 	private int cmptChaine = 0;
 
@@ -24,7 +23,6 @@ public class YVMasm extends YVM {
 		Ecriture.ecrireStringln(o,"add ax,bx");
 		Ecriture.ecrireStringln(o,"push ax");
 	}
-
 
 	public void isub() {
 		Ecriture.ecrireString(o,"; ");
@@ -62,7 +60,6 @@ public class YVMasm extends YVM {
 		Ecriture.ecrireStringln(o,"push ax");
 	}
 
-
 	public void ior() {
 		Ecriture.ecrireString(o,"; ");
 		super.ior();
@@ -80,7 +77,6 @@ public class YVMasm extends YVM {
 		Ecriture.ecrireStringln(o,"and ax,bx");
 		Ecriture.ecrireStringln(o,"push ax");
 	}
-
 
 	public void ineg() {
 		Ecriture.ecrireString(o,"; ");

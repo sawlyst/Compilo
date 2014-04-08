@@ -1,6 +1,4 @@
-package compilateur;
 import java.util.Stack;
-
 
 public class Iteration implements Etiquette {
 

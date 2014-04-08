@@ -1,4 +1,3 @@
-package compilateur;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -41,7 +40,6 @@ public class IdFonc extends Ident {
 	@Override
 	public void setValeur(int valeur) {
 		// TODO Auto-generated method stub
-		
 	}
 
 	@Override
@@ -67,5 +65,4 @@ public class IdFonc extends Ident {
 	{
 		return listeParams.size();
 	}
-	
 }

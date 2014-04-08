@@ -1,5 +1,3 @@
-package compilateur;
-
 public class Param extends Ident  {
 	private int offset;
 	
@@ -33,5 +31,4 @@ public class Param extends Ident  {
 	public void calculerOffset(int taille) {
 		offset = taille + 4 - (offset*2);
 	}
-
 }

@@ -1,4 +1,3 @@
-package compilateur;
 import java.util.Stack;
 
 public class Conditionnelle implements Etiquette {

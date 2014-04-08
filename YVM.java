@@ -1,4 +1,3 @@
-package compilateur;
 import java.io.OutputStream;
 
 public class YVM implements Constantes {

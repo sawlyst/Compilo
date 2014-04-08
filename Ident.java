@@ -1,5 +1,3 @@
-package compilateur;
-
 public abstract class Ident implements Constantes {
 
 	private int type;

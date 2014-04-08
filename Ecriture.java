@@ -1,8 +1,6 @@
-package compilateur;
-
 import java.io.*;
 
-//quelques primitives d'ecriture a l'ecran  ou dans un fichier
+// Quelques primitives d'ecriture a l'ecran ou dans un fichier
 
 public class Ecriture {
 	private static void erreur(IOException e) {

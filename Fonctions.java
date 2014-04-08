@@ -1,4 +1,3 @@
-package compilateur;
 import java.util.Stack;
 
 public class Fonctions {
@@ -32,7 +31,7 @@ public class Fonctions {
 	{
 		if (expr.getSommetTypes() != foncActuelle().getType())
 		{
-			System.out.println("Erreur (l."+tok.beginLine+"): valeur de retour incorrecte");	
+			System.out.println("ERREUR (l. "+tok.beginLine+"): Valeur de retour incorrecte");	
 		}
 		
 	}
@@ -65,7 +64,7 @@ public class Fonctions {
 		}
 		else
 		{
-			System.out.println("Erreur: l'argument "+param+" déjà déclaré pour cette fonction");
+			System.out.println("ERREUR : L'argument "+param+" est deja declare pour cette fonction");
 		}
 	}
 	
@@ -95,14 +94,13 @@ public class Fonctions {
 				int typeArg = fonc.getParam(i).getType();
 				if (typeEmpiler!=typeArg)
 				{
-					System.out.println("Erreur (l."+tok.beginLine+"): le type de l'argument "+(i+1)+" n'a pas le bon type");
-					
+					System.out.println("ERREUR (l. "+tok.beginLine+"): Le type de l'argument "+(i+1)+" n'a pas le bon type");
 				}
 			}
 		}
 		else
 		{
-			System.out.println("Erreur (l."+tok.beginLine+"): nombre d'argument(s) invalide.");
+			System.out.println("ERREUR (l. "+tok.beginLine+"): Nombre d'argument(s) invalide.");
 		}
 	}
 }

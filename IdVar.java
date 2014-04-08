@@ -1,6 +1,3 @@
-package compilateur;
-
-
 public class IdVar extends Ident {
 	private int offset;
 
@@ -33,5 +30,4 @@ public class IdVar extends Ident {
 	public void calculerOffset(int taille) {
 		// TODO Auto-generated method stub
 	}
-
 }

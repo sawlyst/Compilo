@@ -1,6 +1,4 @@
-package compilateur;
 import java.util.Stack;
-
 
 public class Expression implements Constantes {
 	private TabIdent tabIdent;
@@ -54,16 +52,15 @@ public class Expression implements Constantes {
 			Ident id = tabIdent.chercheIdent(ident);
 			if (id.getType()!=types.peek())
 			{
-				System.out.println("Erreur (l."+tok.beginLine+"): le type de la partie droite n'est pas le meme que la partie gauche "+id.getNom()+" a la ligne "+tok.beginLine);
+				System.out.println("ERREUR (l. "+tok.beginLine+"): Le type de la partie droite n'est pas le meme que la partie gauche "+id.getNom());
 			}
 		}
 		else
 		{
-			System.out.println("Erreur (l."+tok.beginLine+"): l'identifiant n'existe pas a la ligne "+tok.beginLine);
+			System.out.println("ERREUR (l. "+tok.beginLine+"): L'identifiant n'existe pas");
 		}
 		
 	}
-	
 	
 	public boolean operation(Token tok)
 	{
@@ -85,7 +82,7 @@ public class Expression implements Constantes {
 					case MUL:
 					case DIV:
 						if (tabOpe[0][type1]==ERROR)
-							System.out.println("Erreur (l."+tok.beginLine+"): l'expression n'est pas correcte.");
+							System.out.println("ERREUR (l. "+tok.beginLine+"): Expression incorrecte");
 						types.push(tabOpe[0][type1]);
 						break;
 						
@@ -94,21 +91,21 @@ public class Expression implements Constantes {
 					case INFEG:
 					case SUPEG:
 						if (tabOpe[1][type1]==ERROR)
-							System.out.println("Erreur (l."+tok.beginLine+"): l'expression n'est pas correcte.");
+							System.out.println("ERREUR (l. "+tok.beginLine+"): Expression incorrecte");
 						types.push(tabOpe[1][type1]);
 						break;
 		
 					case EGAL:
 					case NEGAL:
 						if (tabOpe[2][type1]==ERROR)
-							System.out.println("Erreur (l."+tok.beginLine+"): l'expression n'est pas correcte.");
+							System.out.println("ERREUR (l. "+tok.beginLine+"): Expression incorrecte");
 						types.push(tabOpe[2][type1]);				
 						break;
 						
 					case ET:
 					case OU:
 						if (tabOpe[3][type1]==ERROR)
-							System.out.println("Erreur (l."+tok.beginLine+"): l'expression n'est pas correcte.");
+							System.out.println("ERREUR (l. "+tok.beginLine+"): Expression incorrecte");
 						types.push(tabOpe[3][type1]);
 						
 						break;
@@ -117,7 +114,7 @@ public class Expression implements Constantes {
 			}
 			else
 			{
-				System.out.println("Erreur (l."+tok.beginLine+"): l'expression n'est pas correcte.");
+				System.out.println("ERREUR (l. "+tok.beginLine+"): Expression incorrecte");
 				types.push(ERROR);
 				return false;
 			}
@@ -160,7 +157,7 @@ public class Expression implements Constantes {
 	{
 		if (types.peek() != BOOLEAN)
 		{
-			System.out.println("Erreur (l."+tok.beginLine+"): l'expression n'est pas booleenne.");			
+			System.out.println("ERREUR (l. "+tok.beginLine+"): L'expression n'est pas booleenne.");			
 		}
 	}
 	
@@ -180,8 +177,7 @@ public class Expression implements Constantes {
 	{
 		if (types.peek() != type)
 		{
-			System.out.println("Erreur (l."+tok.beginLine+"): l'expression n'a pas le bon type.");			
+			System.out.println("ERREUR (l. "+tok.beginLine+"): L'expression n'a pas le bon type.");			
 		}
 	}
-	
 }

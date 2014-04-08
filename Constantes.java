@@ -1,5 +1,3 @@
-package compilateur;
-
 public interface Constantes {
 	public final int ENTIER=0,
 					 BOOLEAN=1,

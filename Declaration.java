@@ -1,19 +1,13 @@
-package compilateur;
-
 public class Declaration implements Constantes {
 	
-/**
- * La table des identifiants 
- */
+
+/* Table des identifiants */
 	private TabIdent tabIdent;
 	
-/**
- * Le type de l'identifiant courant
- */
+/* Type de l'identifiant courant */
 	int type;
 	
-/**
- * Constructeur de declaration
+/** Constructeur de declaration
  * @param tabIdent la table des identifiants associee
  */
 	public Declaration(TabIdent tabIdent) {
@@ -35,12 +29,11 @@ public class Declaration implements Constantes {
 		}
 		else
 		{
-			System.out.println("Erreur (l."+tok.beginLine+"): la constante "+id+" est deja declaree.");
+			System.out.println("ERREUR (l. "+tok.beginLine+"): La constante "+id+" est deja declaree.");
 		}
 	}
 	
 /**
- * 
  * @param id l'identifiant de la constante a declarer
  * @param ident l'identifiant de la valeur a affecter a la constante
  * @param tok le token courant
@@ -57,16 +50,15 @@ public class Declaration implements Constantes {
 			}
 			else
 			{
-				System.out.println("Erreur (l."+tok.beginLine+"): la constante "+ident+" n'est pas declaree.");
+				System.out.println("ERREUR (l. "+tok.beginLine+"): La constante "+ident+" n'est pas declaree.");
 			}
 		}
 		else
 		{
-			System.out.println("Erreur (l."+tok.beginLine+"): la constante "+id+" est deja utilisee.");
+			System.out.println("ERREUR (l. "+tok.beginLine+"): La constante "+id+" est deja utilisee.");
 		}
 	}
 /**
- * 
  * @param id l'identifiant de la constante a declarer
  * @param val la valeur booleenne a affecter a la constante
  * @param tok le token courant
@@ -79,7 +71,7 @@ public class Declaration implements Constantes {
 		}
 		else
 		{
-			System.out.println("Erreur (l."+tok.beginLine+"): la constante "+id+" est deja declaree.");
+			System.out.println("ERREUR (l. "+tok.beginLine+"): La constante "+id+" est deja declaree.");
 		}
 	}
 	
@@ -93,7 +85,6 @@ public class Declaration implements Constantes {
 	}
 	
 /**
- * 
  * @param id l'identifiant de la variable a declarer
  * @param tok le token courant
  */
@@ -105,9 +96,7 @@ public class Declaration implements Constantes {
 		}
 		else
 		{
-			System.out.println("Erreur (l."+tok.beginLine+"): la variable "+id+" est deja declaree.");			
+			System.out.println("ERREUR (l. "+tok.beginLine+"): La variable "+id+" est deja declaree.");			
 		}
 	}
-	
-
 }

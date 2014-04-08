@@ -1,5 +1,3 @@
-package compilateur;
-
 public interface Etiquette {
 
 	public String getEtiquetteFin();

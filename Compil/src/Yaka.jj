@@ -4,8 +4,6 @@ options{
 
 PARSER_BEGIN(Yaka)
 
-package compilateur;
-
 public class Yaka implements Constantes {
 
     public static Declaration decl;
